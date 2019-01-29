@@ -129,4 +129,13 @@ Server by @chrisburton
     html {font-size: 14px;}
 }
 
-
+.button {
+    border: 3px solid #222;
+    width: 130px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 6px;
+}
