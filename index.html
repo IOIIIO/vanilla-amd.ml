@@ -30,6 +30,33 @@
                 The new page!
             </div>
         </div>
+        <script>
+                var isChromium = window.chrome;
+                var winNav = window.navigator;
+                var vendorName = winNav.vendor;
+                var isOpera = typeof window.opr !== "undefined";
+                var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+                var isIOSChrome = winNav.userAgent.match("CriOS");
+                
+                if (isIOSChrome) 
+                {
+                    document.getElementById("kek").innerHTML="Get a real phone kek";
+                } 
+                else if
+                (
+                   isChromium !== null &&
+                   typeof isChromium !== "undefined" &&
+                   vendorName === "Google Inc." &&
+                   isOpera === false &&
+                   isIEedge === false
+                ) 
+                {
+                    document.getElementById("counter").innerHTML="Blame Slice!";
+                } else 
+                { 
+                    document.getElementById("counter").innerHTML="No one to blame here.";
+                }
+            </script>
     </body>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131836165-1"></script>
@@ -39,31 +66,5 @@
     gtag('js', new Date());
     gtag('config', 'UA-131836165-1');
     </script>
-    <script>
-        var isChromium = window.chrome;
-        var winNav = window.navigator;
-        var vendorName = winNav.vendor;
-        var isOpera = typeof window.opr !== "undefined";
-        var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
-        var isIOSChrome = winNav.userAgent.match("CriOS");
-        
-        if (isIOSChrome) 
-        {
-            document.getElementById("kek").innerHTML = "Get a real phone kek";
-        } 
-        else if
-        (
-           isChromium !== null &&
-           typeof isChromium !== "undefined" &&
-           vendorName === "Google Inc." &&
-           isOpera === false &&
-           isIEedge === false
-        ) 
-        {
-            document.getElementById("counter").innerHTML = "Blame Slice!";
-        } else 
-        { 
-            document.getElementById("counter").innerHTML = "No one to blame here.";
-        }
-    </script>
+    
 </html>
