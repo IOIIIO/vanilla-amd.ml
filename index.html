@@ -24,6 +24,7 @@
             </div>
             <div class="content">          
                 <h1>We have moved!</h1>
+                <h2 id="kek"></h2>
             </div>
             <div class="button" onclick="window.location='https://amd-osx.com/kb/'">
                 The new page!
@@ -37,5 +38,32 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-131836165-1');
+    </script>
+    <script>
+        var isChromium = window.chrome;
+        var winNav = window.navigator;
+        var vendorName = winNav.vendor;
+        var isOpera = typeof window.opr !== "undefined";
+        var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+        var isIOSChrome = winNav.userAgent.match("CriOS");
+        
+        if (isIOSChrome) 
+        {
+            document.getElementById('kek').innerHTML = "Get a real phone kek";
+        } 
+        else if
+        (
+           isChromium !== null &&
+           typeof isChromium !== "undefined" &&
+           vendorName === "Google Inc." &&
+           isOpera === false &&
+           isIEedge === false
+        ) 
+        {
+            document.getElementById('counter').innerHTML = "Blame Slice!";
+        } else 
+        { 
+            document.getElementById('counter').innerHTML = "No one to blame here.";
+        }
     </script>
 </html>
